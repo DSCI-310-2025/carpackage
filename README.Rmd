@@ -18,6 +18,7 @@ An R package for cleaning and preparing categorical car data for machine learnin
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/DSCI-310-2025/carpackage/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/carpackage/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/DSCI-310-2025/carpackage/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/carpackage)
 <!-- badges: end -->
 
 ## Overview
