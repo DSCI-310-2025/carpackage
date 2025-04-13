@@ -2,25 +2,31 @@
 % Please edit documentation in R/train_final_model.R
 \name{train_final_model}
 \alias{train_final_model}
-\title{Train final kNN model}
+\title{Train final kNN model using caret}
 \usage{
 train_final_model(train_x, train_y, best_k)
 }
 \arguments{
-\item{train_x}{Training predictors.}
+\item{train_x}{A data frame or matrix of predictor variables.}
 
-\item{train_y}{Training response.}
+\item{train_y}{A factor vector of class labels for training.}
 
-\item{best_k}{Optimal k value.}
+\item{best_k}{An integer specifying the optimal number of neighbors to use.}
 }
 \value{
-Trained kNN model.
+A \code{caret} model object of class \code{train}.
 }
 \description{
-Train final kNN model
+Trains a k-Nearest Neighbors (kNN) classification model with the specified number of neighbors (\code{k})
+using the \code{caret} package.
 }
 \examples{
+\dontrun{
+library(caret)
+library(kknn)  # Needed because caret uses knn3 internally
+set.seed(123)
 df <- data.frame(x1 = rnorm(50), x2 = rnorm(50))
 y <- factor(sample(c("yes", "no"), 50, replace = TRUE))
 model <- train_final_model(df, y, best_k = 5)
+}
 }
