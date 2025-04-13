@@ -1,3 +1,4 @@
+---
 title: "carpackage-usage"
 output: rmarkdown::html_vignette
 vignette: >
@@ -15,4 +16,97 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(carpackage)
+library(tidyverse)
 ```
+
+## Overview
+
+This vignette demonstrates how to use the `carpackage` R package to clean, prepare, and model car safety data using a k-Nearest Neighbors (kNN) classifier. These steps mirror the workflow used in our DSCI 310 final project.
+
+---
+
+## 1. Load and Clean the Data
+
+```{r}
+# Read car dataset
+df <- car_data
+
+# Assign column names (as per UCI dataset)
+colnames(df) <- c("buying", "maint", "doors", "persons", "lug_boot", "safety", "class")
+
+# Check NAs and duplicates
+df_clean <- check_data_quality(df)
+head(df_clean)
+```
+
+---
+
+## 2. Encode Ordinal Categorical Variables
+
+```{r}
+# Encode ordinal variables into numeric format
+df_encoded <- df %>%
+  mutate(across(-safety, encode_levels)) %>%
+  mutate(safety = encode_safety(safety))
+head(df_encoded)
+```
+
+---
+
+## 3. Summarize and Visualize the Data
+
+```{r}
+# View class distribution and key feature summaries
+summary_table <- summarize_data(df_encoded)
+print(summary_table)
+```
+
+---
+
+## 4. Run the kNN Classifier
+
+```{r}
+# Train/test split
+df_clean <- df_encoded %>%
+  na.omit() %>%
+  distinct()
+data_splitted <- split_data(df_clean, response_col = "safety", prop = 0.8)
+knn_results <- cross_validate_knn(data_splitted$train_x, data_splitted$train_y)
+
+# Check predictions
+head(knn_results)
+```
+
+---
+
+## 5. Evaluate Model Performance with best parameters
+
+```{r}
+# Pick best k
+best_row <- knn_results[which.max(knn_results$accuracy), ]
+best_k <- best_row$k
+
+# Train final model
+final_model <- train_final_model(data_splitted$train_x, data_splitted$train_y, best_k)
+
+# Predict on test set
+predictions <- predict(final_model, data_splitted$test_x)
+# Calculate accuracy and view confusion matrix
+performance <- compute_test_accuracy(predictions, data_splitted$test_y)
+performance
+```
+
+---
+
+## 6. Visualize the Confusion Matrix
+
+```{r}
+# Plot a heatmap-style confusion matrix
+plot_conf_matrix(predictions, data_splitted$test_y)
+```
+
+---
+
+## Conclusion
+
+The `carpackage` provides a streamlined pipeline for preparing car evaluation data and applying a kNN classifier. With built-in support for ordinal encoding, data quality checks, and visual diagnostics, it simplifies the workflow for categorical ML tasks like car safety prediction.

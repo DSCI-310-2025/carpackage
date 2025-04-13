@@ -2,7 +2,6 @@ library(docopt)
 library(readr)
 library(janitor)
 library(testthat)
-
 #' Load and clean the Car Evaluation dataset from UCI
 #'
 #' Downloads the Car Evaluation dataset from the UCI Machine Learning Repository,
@@ -19,6 +18,7 @@ library(testthat)
 #' \dontrun{
 #' cleaned_data <- load_car_data(output_path = "data/original/car_data.csv")
 #' }
+#' @export
 load_car_data <- function(output_path) {
   if (!is.character(output_path) || nchar(output_path) == 0) {
     stop("❌ Invalid `output_path`: Must be a non-empty string.")
