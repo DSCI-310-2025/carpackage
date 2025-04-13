@@ -37,7 +37,11 @@ maintenance cost, number of passengers, and other factors.
 - `summarize_car_data()` – Summarizes distributions and highlights
   potential imbalance
 - `plot_encoded_distributions()` – Visualizes encoded feature
-  distributions for quick EDA
+  distributions for quick EDA \| `run_knn_model()` \| Trains and
+  predicts using a kNN classifier \| \| `evaluate_knn_performance()` \|
+  Calculates accuracy and shows a confusion matrix \| \|
+  `plot_confusion_matrix()` \| Creates a heatmap visualization of
+  confusion matrix \|
 
 All functions include **graceful error handling** and are optimized for
 clean pipelines in ML tasks.
