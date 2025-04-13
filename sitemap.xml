@@ -1,0 +1,27 @@
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/carpackage-usage.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/calculate_random_baseline.html</loc></url>
+<url><loc>/reference/check_data_quality.html</loc></url>
+<url><loc>/reference/clean_column_names.html</loc></url>
+<url><loc>/reference/compute_test_accuracy.html</loc></url>
+<url><loc>/reference/count_unique_values.html</loc></url>
+<url><loc>/reference/cross_validate_knn.html</loc></url>
+<url><loc>/reference/decode_categorical_features.html</loc></url>
+<url><loc>/reference/encode_levels.html</loc></url>
+<url><loc>/reference/encode_safety.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/load_car_data.html</loc></url>
+<url><loc>/reference/plot_conf_matrix.html</loc></url>
+<url><loc>/reference/plot_distribution.html</loc></url>
+<url><loc>/reference/save_cleaned_data.html</loc></url>
+<url><loc>/reference/split_data.html</loc></url>
+<url><loc>/reference/summarize_data.html</loc></url>
+<url><loc>/reference/train_final_model.html</loc></url>
+</urlset>
+
