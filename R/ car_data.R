@@ -13,4 +13,5 @@
 #'   \item{class}{Car acceptability class}
 #' }
 #' @source UCI Machine Learning Repository
+#' @keywords internal
 "car_data"
