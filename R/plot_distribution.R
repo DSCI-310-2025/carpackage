@@ -8,6 +8,9 @@
 #' @param title The title of the plot.
 #' @param output_path Optional file path to save the plot (should include .png). If NULL, the plot is not saved.
 #'
+#' @importFrom ggplot2 ggplot aes geom_bar labs theme_minimal element_text ggsave
+#' @importFrom rlang sym
+#' 
 #' @return A ggplot object representing the distribution plot.
 #' @export
 #' @examples

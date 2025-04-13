@@ -3,6 +3,8 @@
 #' Converts numerical encodings of categorical features back to labels.
 #' @param data A data frame with encoded categorical variables.
 #' @return A transformed data frame with categorical labels.
+#' 
+#' 
 #' @examples
 #' df <- data.frame(
 #'   buying = c(1, 2, 3, 4),
