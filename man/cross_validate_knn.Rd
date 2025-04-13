@@ -20,7 +20,6 @@ A data frame with k values and corresponding accuracy.
 Perform k-fold cross-validation for kNN
 }
 \examples{
-# Simulate small example dataset
 set.seed(123)
 df <- data.frame(
   buying = sample(1:4, 30, replace = TRUE),
@@ -28,11 +27,7 @@ df <- data.frame(
   persons = sample(2:5, 30, replace = TRUE),
   safety = factor(sample(c("low", "med", "high"), 30, replace = TRUE))
 )
-
-# Prepare inputs
 train_x <- df[, c("buying", "maint", "persons")]
 train_y <- df$safety
-
-# Run kNN cross-validation
 cross_validate_knn(train_x, train_y, k_values = c(1, 3, 5))
 }

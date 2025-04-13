@@ -18,4 +18,5 @@ Encode the safety variable.
 \examples{
 encode_safety(c("low", "med", "high", "2"))
 # Returns: 1, 2, 3, 2
+
 }

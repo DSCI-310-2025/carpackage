@@ -9,6 +9,9 @@ library(testthat)
 #'
 #' @param output_path A string specifying the file path to save the cleaned CSV dataset.
 #'
+#' @importFrom readr read_csv write_csv
+#' @importFrom janitor clean_names
+#'
 #' @return A tibble containing the cleaned and labeled dataset.
 #'
 #' @examples
@@ -17,7 +20,6 @@ library(testthat)
 #' }
 #' @export
 load_car_data <- function(output_path) {
-  # Validate input
   if (!is.character(output_path) || nchar(output_path) == 0) {
     stop("❌ Invalid `output_path`: Must be a non-empty string.")
   }
@@ -43,5 +45,3 @@ load_car_data <- function(output_path) {
 
   return(car_data)
 }
-
-
