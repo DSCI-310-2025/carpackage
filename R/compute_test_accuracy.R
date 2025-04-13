@@ -15,10 +15,10 @@
 
 compute_test_accuracy <- function(predicted, actual) {
   if (length(predicted) != length(actual)) {
-    stop("❌ Lengths of predicted and actual labels must be the same.")
+    stop("Lengths of predicted and actual labels must be the same.")
   }
   if (length(actual) == 0) {
-    stop("❌ Input vectors must not be empty.")
+    stop("Input vectors must not be empty.")
   }
   
   accuracy <- sum(predicted == actual) / length(actual)

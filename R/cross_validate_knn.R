@@ -23,7 +23,7 @@
 #' cross_validate_knn(train_x, train_y, k_values = c(1, 3, 5))
 cross_validate_knn <- function(train_x, train_y, k_values = seq(1, 21, 2)) {
   if (nrow(train_x) == 0 || length(train_y) == 0) {
-    stop("❌ train_x and train_y must not be empty.")
+    stop("train_x and train_y must not be empty.")
   }
 
   train_y <- as.factor(train_y)
@@ -45,7 +45,7 @@ cross_validate_knn <- function(train_x, train_y, k_values = seq(1, 21, 2)) {
 
       results <- rbind(results, data.frame(k = k, accuracy = acc))
     }, error = function(e) {
-      message("⚠️ k = ", k, " failed: ", e$message)
+      message("[WARNING] k = ", k, " failed: ", e$message)
       results <- rbind(results, data.frame(k = k, accuracy = NA))
     })
   }

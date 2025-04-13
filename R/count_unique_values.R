@@ -20,7 +20,7 @@
 #' count_unique_values(df)
 count_unique_values <- function(data) {
   if (!is.data.frame(data)) {
-    stop("❌ Input must be a data frame.")
+    stop("Input must be a data frame.")
   }
 
   data[] <- lapply(data, as.character)
