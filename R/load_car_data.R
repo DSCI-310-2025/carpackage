@@ -21,7 +21,7 @@ library(testthat)
 #' @export
 load_car_data <- function(output_path) {
   if (!is.character(output_path) || nchar(output_path) == 0) {
-    stop("❌ Invalid `output_path`: Must be a non-empty string.")
+    stop("Invalid `output_path`: Must be a non-empty string.")
   }
 
   url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/car/car.data"
@@ -41,7 +41,7 @@ load_car_data <- function(output_path) {
 
   readr::write_csv(car_data, output_path)
 
-  message("✅ Car dataset loaded and saved to ", output_path)
+  message("Car dataset loaded and saved to ", output_path)
 
   return(car_data)
 }

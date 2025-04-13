@@ -11,12 +11,12 @@
 #' save_cleaned_data(df, "data/clean/cleaned_data.csv")
 save_cleaned_data <- function(data, output_file) {
   if (!is.data.frame(data)) {
-    stop("❌ Input must be a data frame.")
+    stop("Input must be a data frame.")
   }
   output_dir <- dirname(output_file)
   if (!dir.exists(output_dir)) {
     dir.create(output_dir, recursive = TRUE)
   }
   readr::write_csv(data, output_file)
-  message("✅ Cleaned data saved to: ", output_file)
+  message("Cleaned data saved to: ", output_file)
 }

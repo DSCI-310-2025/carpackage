@@ -9,7 +9,7 @@
 #' @export
 clean_column_names <- function(data) {
   if (!is.data.frame(data)) {
-    stop("❌ Input must be a data frame.")
+    stop("Input must be a data frame.")
   }
 
   colnames(data) <- c("buying", "maint", "doors", "persons", "lug_boot", "safety", "class")

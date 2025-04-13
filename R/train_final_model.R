@@ -1,17 +1,24 @@
-#' Train final kNN model
+#' Train final kNN model using caret
 #'
-#' @param train_x Training predictors.
-#' @param train_y Training response.
-#' @param best_k Optimal k value.
+#' Trains a k-Nearest Neighbors (kNN) classification model with the specified number of neighbors (`k`)
+#' using the `caret` package.
 #'
-#' @return Trained kNN model.
+#' @param train_x A data frame or matrix of predictor variables.
+#' @param train_y A factor vector of class labels for training.
+#' @param best_k An integer specifying the optimal number of neighbors to use.
+#'
+#' @return A `caret` model object of class `train`.
 #' @export
-#' @importFrom caret train
-#' @importFrom class knn
+#' @importFrom caret train trainControl
 #' @examples
+#' \dontrun{
+#' library(caret)
+#' library(kknn)  # Needed because caret uses knn3 internally
+#' set.seed(123)
 #' df <- data.frame(x1 = rnorm(50), x2 = rnorm(50))
 #' y <- factor(sample(c("yes", "no"), 50, replace = TRUE))
 #' model <- train_final_model(df, y, best_k = 5)
+#' }
 train_final_model <- function(train_x, train_y, best_k) {
   if (!is.numeric(best_k) || is.na(best_k) || length(best_k) != 1) {
     stop("best_k must be a single numeric value.")
@@ -24,4 +31,3 @@ train_final_model <- function(train_x, train_y, best_k) {
   )
   return(model)
 }
-
