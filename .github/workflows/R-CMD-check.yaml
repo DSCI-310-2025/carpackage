@@ -44,6 +44,9 @@ jobs:
           extra-packages: |
             any::rcmdcheck
             any::tidyverse
+            any::caret
+            local::.
+
 
       - uses: r-lib/actions/check-r-package@v2
         with:
