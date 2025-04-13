@@ -1,0 +1,57 @@
+template:
+  url: https://dsci-310-2025.github.io/carpackage/
+  bootstrap: 5
+  bootswatch: flatly
+
+home:
+  title: "carpackage"
+  description: >
+    An R package for cleaning, transforming, and analyzing the UCI Car Evaluation dataset using kNN classification.
+
+navbar:
+  structure:
+    left: [home, reference, articles]
+    right: [github]
+  right:
+    - icon: fa-github
+      href: https://github.com/DSCI-310-2025/carpackage
+
+reference:
+  - title: "Data Loading & Cleaning"
+    contents:
+      - load_car_data
+      - clean_column_names
+      - check_data_quality
+      - save_cleaned_data
+
+  - title: "Data Encoding"
+    contents:
+      - encode_levels
+      - encode_safety
+      - decode_categorical_features
+      - count_unique_values
+
+  - title: "Exploratory Data Analysis"
+    contents:
+      - plot_distribution
+
+  - title: "Data Splitting & Modeling"
+    contents:
+      - split_data
+      - cross_validate_knn
+      - compute_test_accuracy
+      - calculate_random_baseline
+      - train_final_model
+
+  - title: "Evaluation & Visualization"
+    contents:
+      - plot_conf_matrix
+      - summarize_data
+
+articles:
+  - title: "Usage Tutorials"
+    contents:
+      - carpackage-usage
+
+news:
+  one_page: true
