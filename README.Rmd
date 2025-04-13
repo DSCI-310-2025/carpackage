@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # carpackage
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/DSCI-310-2025/carpackage/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/carpackage/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of carpackage is to ...
