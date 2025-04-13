@@ -7,6 +7,10 @@
 #' @return A list with train_x, train_y, test_x, test_y.
 #' @export
 #' 
+#' @importFrom dplyr select all_of
+#' @importFrom caret createDataPartition
+#' @importFrom magrittr %>%
+#' 
 #' @examples
 #' df <- data.frame(
 #'   feature1 = rnorm(100),

@@ -18,4 +18,5 @@ Encode categorical variables with predefined levels.
 \examples{
 encode_levels(c("low", "med", "high", "vhigh", "acc", "vgood", "3"))
 # Returns: 1, 2, 3, 4, 2, 4, 3
+
 }

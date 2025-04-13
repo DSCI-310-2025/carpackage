@@ -11,13 +11,16 @@ RoxygenNote: 7.3.2
 Imports:
     readr,
     dplyr,
-    ggplot2,
     tidyr,
-    janitor,
-    docopt,
+    ggplot2,
+    magrittr,
     pointblank,
+    class,
+    docopt,
+    rlang,
     caret,
-    class
+    janitor,
+    kknn
 Suggests: 
     knitr,
     rmarkdown,

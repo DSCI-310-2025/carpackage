@@ -4,7 +4,7 @@
 \alias{count_unique_values}
 \title{Count Unique Values}
 \usage{
-count_unique_values(df)
+count_unique_values(data)
 }
 \arguments{
 \item{data}{A data frame.}
