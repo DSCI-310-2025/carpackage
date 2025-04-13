@@ -25,4 +25,4 @@ car_data
 \description{
 A dataset containing categorical car features and safety ratings.
 }
-\keyword{datasets}
+\keyword{internal}
