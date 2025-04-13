@@ -1,4 +1,3 @@
----
 title: "carpackage-usage"
 output: rmarkdown::html_vignette
 vignette: >
