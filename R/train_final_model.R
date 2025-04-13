@@ -6,7 +6,7 @@
 #'
 #' @return Trained kNN model.
 #' @export
-#' 
+#'
 #' @examples
 #' df <- data.frame(x1 = rnorm(50), x2 = rnorm(50))
 #' y <- factor(sample(c("yes", "no"), 50, replace = TRUE))
